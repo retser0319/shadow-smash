@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://gbsa0pue72rc"]
+
+[ext_resource type="Script" uid="uid://jy6vp844kjbo" path="res://Scenes/player_1.gd" id="1_cvnsp"]
+[ext_resource type="SpriteFrames" uid="uid://8vsffvnumenb" path="res://game dot/shadow/fighter/fighter.tres" id="2_cvnsp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtg1u"]
+size = Vector2(42.1875, 68.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
+size = Vector2(25.25, 69)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -13)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_cvnsp")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dtg1u")
+
+[node name="AttackArea" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(31, 0)
+shape = SubResource("RectangleShape2D_fkybt")
+disabled = true
+debug_color = Color(0.333329, 0.487782, 1, 0.42)
+
+[node name="ATimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Delay" type="Timer" parent="ATimer"]
+one_shot = true
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="timeout" from="ATimer" to="." method="_on_a_timer_timeout"]
+[connection signal="timeout" from="ATimer/Delay" to="." method="_on_delay_timeout"]

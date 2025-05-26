@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://gbsa0pue72rc"]
+
+[ext_resource type="Script" uid="uid://jy6vp844kjbo" path="res://player.gd" id="1_cvnsp"]
+[ext_resource type="SpriteFrames" uid="uid://2ijf70jl4j81" path="res://game dot/shadow/gunner/gunner.tres" id="2_s1381"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtg1u"]
+size = Vector2(42.1875, 68.875)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -13)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_s1381")
+animation = &"hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dtg1u")
+
+[node name="AR" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="NK" type="Timer" parent="."]
+
+[connection signal="timeout" from="AR" to="." method="Attack_Reset"]
+[connection signal="timeout" from="NK" to="." method="_on_nk_timeout"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4c1gj1427xor"]
+
+[ext_resource type="Script" uid="uid://bhlv2347ospgt" path="res://Scenes/winner.gd" id="1_82f2s"]
+[ext_resource type="Texture2D" uid="uid://hp4fmg6xh7mo" path="res://game dot/shadow/UI/Winner is.png" id="1_v0ybt"]
+[ext_resource type="Texture2D" uid="uid://db8acay1x2s6n" path="res://game dot/shadow/UI/WinP1.png" id="2_82f2s"]
+[ext_resource type="Texture2D" uid="uid://evnbsyigdm4c" path="res://game dot/shadow/UI/button1.png" id="4_mgbml"]
+[ext_resource type="Texture2D" uid="uid://doiwkjjha5ao7" path="res://game dot/shadow/UI/button2.png" id="5_ecdl1"]
+[ext_resource type="FontFile" uid="uid://df44rrg8u85p7" path="res://fonts/LionelMicroNbp.ttf" id="6_ehb81"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vp57e"]
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_82f2s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("CanvasTexture_vp57e")
+
+[node name="Winner is" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_v0ybt")
+
+[node name="WhoP" type="TextureRect" parent="Winner is"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 143.25
+offset_top = 71.5
+offset_right = 285.25
+offset_bottom = 142.5
+texture = ExtResource("2_82f2s")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+process_mode = 3
+texture_filter = 1
+layout_mode = 0
+offset_left = 448.0
+offset_top = 535.0
+offset_right = 488.0
+offset_bottom = 575.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_mgbml")
+texture_hover = ExtResource("5_ecdl1")
+
+[node name="Label" type="Label" parent="TextureButton"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("6_ehb81")
+theme_override_font_sizes/font_size = 24
+text = "TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

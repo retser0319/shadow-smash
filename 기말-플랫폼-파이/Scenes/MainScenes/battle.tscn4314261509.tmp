@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxx585g64supf"]
+
+[ext_resource type="Script" uid="uid://dic4qtd0hlh8p" path="res://Scenes/MainScenes/Main.gd" id="1_5mapw"]
+[ext_resource type="PackedScene" uid="uid://gbsa0pue72rc" path="res://Scenes/character/player.tscn" id="2_vxoi2"]
+[ext_resource type="PackedScene" uid="uid://s4orj70lcssv" path="res://Scenes/UI/Healpack.tscn" id="3_cjsgt"]
+[ext_resource type="PackedScene" uid="uid://ditdxn2dmrtct" path="res://Scenes/UI/Mine.tscn" id="4_vxoi2"]
+[ext_resource type="PackedScene" uid="uid://b7sttuo3napfr" path="res://Scenes/UI/DamageBar.tscn" id="5_cjsgt"]
+[ext_resource type="PackedScene" uid="uid://cog8m0fmhavk5" path="res://Scenes/MainScenes/cardpick_tscn.tscn" id="6_smcma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+size = Vector2(14.45, 1.18)
+
+[node name="battle" type="Node2D"]
+script = ExtResource("1_5mapw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(616, 757)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-124.5, -206.5)
+scale = Vector2(100, 50)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="P1" parent="." groups=["Player"] instance=ExtResource("2_vxoi2")]
+position = Vector2(171, 484)
+
+[node name="P2" parent="." groups=["Player"] instance=ExtResource("2_vxoi2")]
+position = Vector2(924, 486)
+
+[node name="Healpack" parent="." instance=ExtResource("3_cjsgt")]
+position = Vector2(663, 171)
+
+[node name="Mine" parent="." instance=ExtResource("4_vxoi2")]
+position = Vector2(172, 361)
+
+[node name="NKbar" parent="." instance=ExtResource("5_cjsgt")]
+
+[node name="Mine2" parent="." instance=ExtResource("4_vxoi2")]
+position = Vector2(442, 334)
+
+[node name="Mine3" parent="." instance=ExtResource("4_vxoi2")]
+position = Vector2(952, 346)
+
+[node name="Mine4" parent="." instance=ExtResource("4_vxoi2")]
+position = Vector2(695, 328)
+
+[node name="CardTscn" parent="." instance=ExtResource("6_smcma")]
+process_mode = 3
+visible = false

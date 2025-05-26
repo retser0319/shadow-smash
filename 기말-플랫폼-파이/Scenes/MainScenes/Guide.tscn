@@ -1,0 +1,442 @@
+[gd_scene load_steps=10 format=3 uid="uid://l3thgk6235jw"]
+
+[ext_resource type="Script" uid="uid://dged0r5bog2hm" path="res://Scenes/MainScenes/guide.gd" id="1_l6b78"]
+[ext_resource type="Texture2D" uid="uid://evnbsyigdm4c" path="res://game dot/shadow/UI/button1.png" id="2_mdl8o"]
+[ext_resource type="Texture2D" uid="uid://doiwkjjha5ao7" path="res://game dot/shadow/UI/button2.png" id="3_8fhc2"]
+[ext_resource type="FontFile" uid="uid://df44rrg8u85p7" path="res://fonts/LionelMicroNbp.ttf" id="4_rux8g"]
+[ext_resource type="Texture2D" uid="uid://bngrl7ptpj0tw" path="res://game dot/shadow/UI/Key button.png" id="5_u3l16"]
+[ext_resource type="Texture2D" uid="uid://3eqpmlwxi6xv" path="res://game dot/shadow/UI/Key button that2.png" id="6_x4k2m"]
+[ext_resource type="Texture2D" uid="uid://ci1k5t77psvix" path="res://game dot/shadow/UI/Key button that1.png" id="7_7qcdp"]
+[ext_resource type="Texture2D" uid="uid://cn3ug7ihbpugr" path="res://game dot/shadow/UI/Key button that3.png" id="8_1gxer"]
+[ext_resource type="Texture2D" uid="uid://clkwup77didjq" path="res://game dot/shadow/UI/Key button that4.png" id="9_c3mgd"]
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_l6b78")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.597176, 0.597176, 0.597176, 1)
+
+[node name="Title" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 465.0
+offset_top = 586.0
+offset_right = 684.0
+offset_bottom = 646.0
+texture_normal = ExtResource("2_mdl8o")
+texture_hover = ExtResource("3_8fhc2")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 30
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="TextureButton" parent="."]
+texture_filter = 1
+offset_right = 219.0
+offset_bottom = 60.0
+texture_normal = ExtResource("2_mdl8o")
+texture_hover = ExtResource("3_8fhc2")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Back"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 219.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 931.0
+offset_right = 1150.0
+offset_bottom = 60.0
+pivot_offset = Vector2(1, 0)
+texture_normal = ExtResource("2_mdl8o")
+texture_hover = ExtResource("3_8fhc2")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Next"]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 30
+text = "NEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Page1" type="Node2D" parent="."]
+
+[node name="Key" type="Label" parent="Page1"]
+offset_left = 528.0
+offset_top = 22.0
+offset_right = 616.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 50
+text = "KEY"
+
+[node name="Label" type="Label" parent="Page1/Key"]
+layout_mode = 0
+offset_left = -528.0
+offset_top = -22.0
+offset_right = 623.0
+offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 40
+text = "
+
+P1                                                                           P2
+Move                                                                      Move
+
+
+
+JUMP                                                                      JUMP
+
+Attack                                                                  Attack
+
+SP Attack                                                            SP Attack"
+horizontal_alignment = 1
+
+[node name="P1" type="Node2D" parent="Page1"]
+
+[node name="W" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(177, 206)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/W"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="S" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(177, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/S"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="A" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(124, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/A"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(230, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/D"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="K" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(320, 318)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/K"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(320, 408)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/J"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="U" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(320, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/U"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "U"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(375, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/I"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="O" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(430, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/O"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "O"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="P2" type="Node2D" parent="Page1"]
+
+[node name="Up" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(978, 206)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_x4k2m")
+
+[node name="Down" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(978, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_7qcdp")
+
+[node name="Left" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(925, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1gxer")
+
+[node name="Right" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(1031, 259)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("9_c3mgd")
+
+[node name="K" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(827, 318)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/K"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(827, 408)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/J"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="U" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(717, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/U"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(772, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/I"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="O" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(827, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/O"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 14.0
+pivot_offset = Vector2(15.3333, 16)
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 24
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Page2" type="Node2D" parent="."]
+visible = false
+
+[node name="How" type="Label" parent="Page2"]
+offset_left = 435.0
+offset_top = 22.0
+offset_right = 747.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 50
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Page2/How"]
+layout_mode = 0
+offset_left = -435.0
+offset_top = -22.0
+offset_right = 716.0
+offset_bottom = 622.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 40
+text = "
+
+1. 다른 플레이어를 낙하 시키세요.
+    - 각 플레이어는 3개의 목숨을 가집니다.
+
+2. 증강을 선택하세요.
+    - 목숨을 잃은 플레이어가 먼저 선택합니다.
+
+3. 힐 팩을 먹어 게이지를 회복하세요.
+   - 일정 시간이 지날 때 마다 맵에 힐 팩이 나타납니다."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Title" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

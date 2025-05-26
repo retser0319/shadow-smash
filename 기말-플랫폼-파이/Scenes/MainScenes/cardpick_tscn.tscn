@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://cog8m0fmhavk5"]
+
+[ext_resource type="Script" uid="uid://bekqrfb3wr2hm" path="res://Scenes/MainScenes/cardpick_tscn.gd" id="1_is31p"]
+[ext_resource type="Texture2D" uid="uid://bvjbiqtikuarq" path="res://game dot/shadow/UI/card.png" id="1_ys3cn"]
+[ext_resource type="Texture2D" uid="uid://ctsq7hx5s6lgi" path="res://game dot/UI/SelectP1.png" id="3_rynir"]
+[ext_resource type="Texture2D" uid="uid://cq54vp2bh8apc" path="res://game dot/UI/SelectP2.png" id="4_dvymf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_is31p"]
+
+[node name="CardTscn" type="CanvasLayer"]
+script = ExtResource("1_is31p")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.333333)
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("ViewportTexture_is31p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -197.0
+offset_right = 577.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -30
+alignment = 1
+
+[node name="Card1" type="TextureRect" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_ys3cn")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Card1"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 179.0
+offset_right = 295.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 18
+text = "플레이어의 공격력이
+n 증가합니다."
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Card2" type="TextureRect" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_ys3cn")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Card2"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 179.0
+offset_right = 295.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 18
+text = "플레이어의 이동속도가
+n 증가 합니다."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Card3" type="TextureRect" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_ys3cn")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Card3"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 179.0
+offset_right = 295.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 18
+text = "플레이어의 점프력이
+n 증가합니다."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SelectP1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(137, 199)
+scale = Vector2(9, 9)
+texture = ExtResource("3_rynir")
+
+[node name="SelectP2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1018, 450)
+rotation = 1.5708
+scale = Vector2(9, 9)
+texture = ExtResource("4_dvymf")
+flip_h = true

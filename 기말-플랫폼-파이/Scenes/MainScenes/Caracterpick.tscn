@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://dk3citaih3pss"]
+
+[ext_resource type="Script" uid="uid://cpnp3cb7peffg" path="res://Scenes/MainScenes/caracterpick.gd" id="1_bwdt2"]
+[ext_resource type="Texture2D" uid="uid://nscbxcko3lpj" path="res://game dot/UI/SelectScene.png" id="2_24qvx"]
+[ext_resource type="Texture2D" uid="uid://dnex07llh47wy" path="res://game dot/UI/Fighter.png" id="3_0uyfg"]
+[ext_resource type="Texture2D" uid="uid://ctxeln6v8hbw6" path="res://game dot/UI/gunner.png" id="4_ydnuo"]
+[ext_resource type="Texture2D" uid="uid://ciryahd80xh03" path="res://game dot/UI/lancer.png" id="5_acae7"]
+[ext_resource type="Texture2D" uid="uid://ctsq7hx5s6lgi" path="res://game dot/UI/SelectP1.png" id="6_0uyfg"]
+[ext_resource type="Texture2D" uid="uid://cq54vp2bh8apc" path="res://game dot/UI/SelectP2.png" id="7_ydnuo"]
+[ext_resource type="Texture2D" uid="uid://dxku1lm20c4yd" path="res://game dot/UI/FighterP.png" id="8_acae7"]
+[ext_resource type="Texture2D" uid="uid://b4nsb0rxwp70w" path="res://game dot/UI/lancerP.png" id="9_egeg6"]
+
+[node name="Caracterpick" type="Node2D"]
+script = ExtResource("1_bwdt2")
+
+[node name="BG" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("2_24qvx")
+
+[node name="Fighter" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(416, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("3_0uyfg")
+
+[node name="Gunner" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ydnuo")
+
+[node name="Lancer" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(736, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("5_acae7")
+
+[node name="SelectP1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(392, 232)
+scale = Vector2(3, 3)
+texture = ExtResource("6_0uyfg")
+
+[node name="SelectP2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(760, 232)
+scale = Vector2(3, 3)
+texture = ExtResource("7_ydnuo")
+flip_h = true
+
+[node name="P1CHA" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(171, 366)
+scale = Vector2(7, 7)
+texture = ExtResource("8_acae7")
+
+[node name="P2CHA" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(974, 366)
+scale = Vector2(7, 7)
+texture = ExtResource("9_egeg6")
+flip_h = true

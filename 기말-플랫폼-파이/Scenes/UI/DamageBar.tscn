@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7sttuo3napfr"]
+
+[ext_resource type="Script" uid="uid://bnhbvdc8g18tl" path="res://Scenes/UI/damage_bar.gd" id="1_okwve"]
+[ext_resource type="Texture2D" uid="uid://b5a5e4tg3ynji" path="res://game dot/Number/Number_0.png" id="2_41n1w"]
+[ext_resource type="Texture2D" uid="uid://bgub7333fhkvm" path="res://game dot/Number/Percent.png" id="3_51h2b"]
+[ext_resource type="Texture2D" uid="uid://cskkpwewq7yqj" path="res://game dot/Number/Number_3.png" id="4_v1bew"]
+[ext_resource type="Texture2D" uid="uid://beb0yni1f0fnq" path="res://game dot/Number/Life.png" id="5_74sss"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_okwve")
+
+[node name="P1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 145.0
+offset_top = 567.0
+offset_right = 145.0
+offset_bottom = 567.0
+
+[node name="bar100" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="bar10" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.0
+offset_right = 76.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="bar1" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_right = 112.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="per" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 113.0
+offset_right = 153.0
+offset_bottom = 40.0
+texture = ExtResource("3_51h2b")
+
+[node name="P1Life" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 41.0
+offset_right = 112.0
+offset_bottom = 81.0
+texture = ExtResource("4_v1bew")
+
+[node name="LifeHeart" type="TextureRect" parent="P1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 113.0
+offset_top = 41.0
+offset_right = 153.0
+offset_bottom = 81.0
+texture = ExtResource("5_74sss")
+
+[node name="P2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 851.0
+offset_top = 567.0
+offset_right = 851.0
+offset_bottom = 567.0
+
+[node name="bar100" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="bar10" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.0
+offset_right = 76.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="bar1" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_right = 112.0
+offset_bottom = 40.0
+texture = ExtResource("2_41n1w")
+
+[node name="per" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 113.0
+offset_right = 153.0
+offset_bottom = 40.0
+texture = ExtResource("3_51h2b")
+
+[node name="P2Life" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 41.0
+offset_right = 112.0
+offset_bottom = 81.0
+texture = ExtResource("4_v1bew")
+
+[node name="LifeHeart" type="TextureRect" parent="P2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 113.0
+offset_top = 41.0
+offset_right = 153.0
+offset_bottom = 81.0
+texture = ExtResource("5_74sss")

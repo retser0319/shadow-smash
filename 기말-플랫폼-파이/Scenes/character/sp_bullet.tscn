@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ydjcgcmkwued"]
+
+[ext_resource type="Script" uid="uid://dckmi3vx2j7mt" path="res://Scenes/character/sp_bullet.gd" id="1_ybsro"]
+[ext_resource type="Texture2D" uid="uid://ckjjo6vk35ufc" path="res://game dot/shadow/gunner/special bullet.png" id="2_rljxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8ehf"]
+size = Vector2(2, 2)
+
+[node name="SP_bullet" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ybsro")
+
+[node name="Area2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_rljxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g8ehf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

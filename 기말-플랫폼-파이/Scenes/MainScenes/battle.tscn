@@ -1,0 +1,102 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxx585g64supf"]
+
+[ext_resource type="Script" uid="uid://dic4qtd0hlh8p" path="res://Scenes/MainScenes/Main.gd" id="1_5mapw"]
+[ext_resource type="Texture2D" uid="uid://l6b01r7w7k00" path="res://game dot/platform/back1.png" id="2_5hckg"]
+[ext_resource type="Texture2D" uid="uid://by571bs1fgxqy" path="res://game dot/platform/tile 1.png" id="2_smcma"]
+[ext_resource type="PackedScene" uid="uid://gbsa0pue72rc" path="res://Scenes/character/player.tscn" id="2_vxoi2"]
+[ext_resource type="PackedScene" uid="uid://s4orj70lcssv" path="res://Scenes/UI/Healpack.tscn" id="3_cjsgt"]
+[ext_resource type="PackedScene" uid="uid://b7sttuo3napfr" path="res://Scenes/UI/DamageBar.tscn" id="5_cjsgt"]
+[ext_resource type="PackedScene" uid="uid://cog8m0fmhavk5" path="res://Scenes/MainScenes/cardpick_tscn.tscn" id="6_smcma"]
+[ext_resource type="Texture2D" uid="uid://i0fttjpyawox" path="res://game dot/platform/tile 3.png" id="7_bacfk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+size = Vector2(48, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hckg"]
+size = Vector2(284.333, 16)
+
+[node name="battle" type="Node2D"]
+script = ExtResource("1_5mapw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 288.0
+offset_bottom = 162.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_5hckg")
+
+[node name="oneway" type="StaticBody2D" parent="."]
+texture_filter = 1
+position = Vector2(331, 386)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="oneway"]
+position = Vector2(-9.53674e-07, -1.5)
+shape = SubResource("RectangleShape2D_bo1nx")
+one_way_collision = true
+one_way_collision_margin = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="oneway"]
+position = Vector2(0, 0.333336)
+texture = ExtResource("2_smcma")
+
+[node name="oneway2" type="StaticBody2D" parent="."]
+texture_filter = 1
+position = Vector2(774, 386)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="oneway2"]
+position = Vector2(-9.53674e-07, -1.5)
+shape = SubResource("RectangleShape2D_bo1nx")
+one_way_collision = true
+one_way_collision_margin = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="oneway2"]
+position = Vector2(0, 0.333336)
+texture = ExtResource("2_smcma")
+
+[node name="P1" parent="." groups=["Player"] instance=ExtResource("2_vxoi2")]
+position = Vector2(171, 484)
+
+[node name="P2" parent="." groups=["Player"] instance=ExtResource("2_vxoi2")]
+position = Vector2(924, 484)
+
+[node name="Healpack" parent="." instance=ExtResource("3_cjsgt")]
+position = Vector2(551, 207)
+
+[node name="NKbar" parent="." instance=ExtResource("5_cjsgt")]
+
+[node name="CardTscn" parent="." instance=ExtResource("6_smcma")]
+process_mode = 3
+visible = false
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(210, 547)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(116.167, 0)
+shape = SubResource("RectangleShape2D_5hckg")
+
+[node name="TextureRect" type="TextureRect" parent="StaticBody2D2/CollisionShape2D"]
+texture_filter = 1
+offset_left = -142.0
+offset_top = -8.0
+offset_right = 143.0
+offset_bottom = 8.0
+texture = ExtResource("7_bacfk")
+stretch_mode = 1
+
+[node name="oneway3" type="StaticBody2D" parent="."]
+texture_filter = 1
+position = Vector2(552, 266)
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="oneway3"]
+position = Vector2(-9.53674e-07, -1.5)
+shape = SubResource("RectangleShape2D_bo1nx")
+one_way_collision = true
+one_way_collision_margin = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="oneway3"]
+texture = ExtResource("2_smcma")

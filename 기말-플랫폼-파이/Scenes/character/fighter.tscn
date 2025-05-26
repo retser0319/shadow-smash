@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkwqiq2t3pb7x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py0ui"]
+size = Vector2(8.33333, 24.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbsgr"]
+size = Vector2(14, 24.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltvq8"]
+size = Vector2(22, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n2a7b"]
+radius = 18.0
+
+[node name="Area" type="Node2D"]
+position = Vector2(0, -13)
+scale = Vector2(3, 3)
+
+[node name="NA" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="NA"]
+position = Vector2(9.83333, 3.66667)
+shape = SubResource("RectangleShape2D_py0ui")
+disabled = true
+
+[node name="S1" type="Area2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Collision" type="CollisionShape2D" parent="S1"]
+position = Vector2(10, 2.66667)
+shape = SubResource("RectangleShape2D_wbsgr")
+disabled = true
+
+[node name="S2" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="S2"]
+position = Vector2(1, 6)
+shape = SubResource("RectangleShape2D_ltvq8")
+disabled = true
+
+[node name="S3" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="S3"]
+position = Vector2(3, 1)
+shape = SubResource("CircleShape2D_n2a7b")
+disabled = true

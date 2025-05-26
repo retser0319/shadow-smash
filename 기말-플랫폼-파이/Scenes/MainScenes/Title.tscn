@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://ht76qhfapb3a"]
+
+[ext_resource type="Script" uid="uid://dhxunou2ebapy" path="res://Scenes/MainScenes/Title.gd" id="1_ti4w6"]
+[ext_resource type="Texture2D" uid="uid://c6ngdjjsh7kcv" path="res://game dot/shadow/UI/Title.png" id="2_e8qc1"]
+[ext_resource type="Texture2D" uid="uid://c8n5re6ppu0av" path="res://game dot/shadow/UI/PLAY1.png" id="3_xyp27"]
+[ext_resource type="Texture2D" uid="uid://cv48p3ovvtchb" path="res://game dot/shadow/UI/PLAY2.png" id="4_73gom"]
+[ext_resource type="Texture2D" uid="uid://bb2g4gfqlhwbc" path="res://game dot/shadow/UI/Guide1.png" id="5_gvmy1"]
+[ext_resource type="Texture2D" uid="uid://bt2vvaaprvq1a" path="res://game dot/shadow/UI/Guide2.png" id="6_louvd"]
+[ext_resource type="Texture2D" uid="uid://b0g1385krwm08" path="res://game dot/shadow/UI/setting1.png" id="7_pw7v8"]
+[ext_resource type="Texture2D" uid="uid://daac7ufduqro6" path="res://game dot/shadow/UI/setting2.png" id="8_lqjhu"]
+[ext_resource type="Texture2D" uid="uid://b5hin0ni4hfi8" path="res://game dot/shadow/UI/EXIT1.png" id="9_xqeq7"]
+[ext_resource type="Texture2D" uid="uid://cy3ccftye0gos" path="res://game dot/shadow/UI/EXIT2.png" id="10_ci4xf"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_ti4w6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.29439, -1.23193)
+scale = Vector2(2.58876, 2.46388)
+texture = ExtResource("2_e8qc1")
+offset = Vector2(223, 132)
+
+[node name="Play" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 144.0
+offset_top = 327.0
+offset_right = 572.0
+offset_bottom = 558.0
+scale = Vector2(1, 1.002)
+texture_normal = ExtResource("3_xyp27")
+texture_hover = ExtResource("4_73gom")
+stretch_mode = 0
+
+[node name="Guide" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 581.0
+offset_top = 327.0
+offset_right = 887.0
+offset_bottom = 436.0
+scale = Vector2(1, 1.002)
+texture_normal = ExtResource("5_gvmy1")
+texture_hover = ExtResource("6_louvd")
+stretch_mode = 0
+
+[node name="Setting" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 547.0
+offset_top = 450.0
+offset_right = 853.0
+offset_bottom = 559.0
+scale = Vector2(1, 1.002)
+texture_normal = ExtResource("7_pw7v8")
+texture_hover = ExtResource("8_lqjhu")
+stretch_mode = 0
+
+[node name="Exit" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 850.0
+offset_top = 450.0
+offset_right = 1039.0
+offset_bottom = 560.0
+scale = Vector2(1, 1.002)
+texture_normal = ExtResource("9_xqeq7")
+texture_hover = ExtResource("10_ci4xf")
+stretch_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1352, 648)
+ignore_rotation = false
+enabled = false
+position_smoothing_enabled = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Guide" to="." method="_on_guide_pressed"]
+[connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
