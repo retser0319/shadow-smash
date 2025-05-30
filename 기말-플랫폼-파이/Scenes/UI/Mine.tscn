@@ -96,7 +96,7 @@ shape = SubResource("RectangleShape2D_clxqb")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -6.57895)
-target_position = Vector2(0, 10)
+target_position = Vector2(0, 8.94737)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://ht76qhfapb3a"]
+[gd_scene load_steps=13 format=3 uid="uid://ht76qhfapb3a"]
 
 [ext_resource type="Script" uid="uid://dhxunou2ebapy" path="res://Scenes/MainScenes/Title.gd" id="1_ti4w6"]
 [ext_resource type="Texture2D" uid="uid://c6ngdjjsh7kcv" path="res://game dot/shadow/UI/Title.png" id="2_e8qc1"]
 [ext_resource type="Texture2D" uid="uid://c8n5re6ppu0av" path="res://game dot/shadow/UI/PLAY1.png" id="3_xyp27"]
 [ext_resource type="Texture2D" uid="uid://cv48p3ovvtchb" path="res://game dot/shadow/UI/PLAY2.png" id="4_73gom"]
 [ext_resource type="Texture2D" uid="uid://bb2g4gfqlhwbc" path="res://game dot/shadow/UI/Guide1.png" id="5_gvmy1"]
+[ext_resource type="AudioStream" uid="uid://ch4pb100hyjn7" path="res://song/Blop Sound.mp3" id="5_xgi51"]
 [ext_resource type="Texture2D" uid="uid://bt2vvaaprvq1a" path="res://game dot/shadow/UI/Guide2.png" id="6_louvd"]
 [ext_resource type="Texture2D" uid="uid://b0g1385krwm08" path="res://game dot/shadow/UI/setting1.png" id="7_pw7v8"]
 [ext_resource type="Texture2D" uid="uid://daac7ufduqro6" path="res://game dot/shadow/UI/setting2.png" id="8_lqjhu"]
 [ext_resource type="Texture2D" uid="uid://b5hin0ni4hfi8" path="res://game dot/shadow/UI/EXIT1.png" id="9_xqeq7"]
 [ext_resource type="Texture2D" uid="uid://cy3ccftye0gos" path="res://game dot/shadow/UI/EXIT2.png" id="10_ci4xf"]
+[ext_resource type="AudioStream" uid="uid://6fqjm4mxtjy3" path="res://song/Shadow Smash.mp3" id="11_d65ci"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_ti4w6")
@@ -32,6 +34,9 @@ texture_normal = ExtResource("3_xyp27")
 texture_hover = ExtResource("4_73gom")
 stretch_mode = 0
 
+[node name="P" type="AudioStreamPlayer2D" parent="Play"]
+stream = ExtResource("5_xgi51")
+
 [node name="Guide" type="TextureButton" parent="."]
 texture_filter = 1
 offset_left = 581.0
@@ -42,6 +47,9 @@ scale = Vector2(1, 1.002)
 texture_normal = ExtResource("5_gvmy1")
 texture_hover = ExtResource("6_louvd")
 stretch_mode = 0
+
+[node name="G" type="AudioStreamPlayer2D" parent="Guide"]
+stream = ExtResource("5_xgi51")
 
 [node name="Setting" type="TextureButton" parent="."]
 texture_filter = 1
@@ -54,6 +62,9 @@ texture_normal = ExtResource("7_pw7v8")
 texture_hover = ExtResource("8_lqjhu")
 stretch_mode = 0
 
+[node name="S" type="AudioStreamPlayer2D" parent="Setting"]
+stream = ExtResource("5_xgi51")
+
 [node name="Exit" type="TextureButton" parent="."]
 texture_filter = 1
 offset_left = 850.0
@@ -65,6 +76,9 @@ texture_normal = ExtResource("9_xqeq7")
 texture_hover = ExtResource("10_ci4xf")
 stretch_mode = 0
 
+[node name="E" type="AudioStreamPlayer2D" parent="Exit"]
+stream = ExtResource("5_xgi51")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(1352, 648)
@@ -72,7 +86,15 @@ ignore_rotation = false
 enabled = false
 position_smoothing_enabled = true
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_d65ci")
+autoplay = true
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Guide" to="." method="_on_guide_mouse_entered"]
 [connection signal="pressed" from="Guide" to="." method="_on_guide_pressed"]
+[connection signal="mouse_entered" from="Setting" to="." method="_on_setting_mouse_entered"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

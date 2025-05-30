@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=68 format=3 uid="uid://2ijf70jl4j81"]
+[gd_resource type="SpriteFrames" load_steps=72 format=3 uid="uid://2ijf70jl4j81"]
 
 [ext_resource type="Texture2D" uid="uid://lllvovephn1n" path="res://game dot/shadow/gunner/shadow gunner attack.png" id="1_5lmal"]
+[ext_resource type="Texture2D" uid="uid://cdnd38xfcvpgk" path="res://game dot/shadow/gunner/gunner dash-sheet.png" id="2_82erc"]
 [ext_resource type="Texture2D" uid="uid://cnm4baabj4pyv" path="res://game dot/shadow/fighter/hit.png" id="2_hu60o"]
 [ext_resource type="Texture2D" uid="uid://b824fvkatblm0" path="res://game dot/shadow/gunner/gunner idle.png" id="3_82erc"]
 [ext_resource type="Texture2D" uid="uid://voap4q5472lp" path="res://game dot/shadow/gunner/gunner jump.png" id="4_4ikua"]
@@ -60,6 +61,18 @@ region = Rect2(352, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_13xor"]
 atlas = ExtResource("1_5lmal")
 region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ikua"]
+atlas = ExtResource("2_82erc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b47tc"]
+atlas = ExtResource("2_82erc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umu1r"]
+atlas = ExtResource("2_82erc")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nyb5"]
 atlas = ExtResource("2_hu60o")
@@ -300,6 +313,20 @@ animations = [{
 "loop": true,
 "name": &"attack3",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ikua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b47tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umu1r")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,

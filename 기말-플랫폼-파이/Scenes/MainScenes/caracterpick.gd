@@ -25,14 +25,17 @@ func _process(delta: float) -> void:
 
 func P1select():
 	if Input.is_action_just_pressed("P1_MR") and P1_is_Select == false:
+		$popup.play()
 		if P1P>=3:return
 		else:P1P += 1
 	elif Input.is_action_just_pressed("P1_ML") and P1_is_Select == false:
+		$popup.play()
 		if P1P<=1:return
 		else:P1P-=1
 	$P1CHA.texture = load(img[P1P-1])
 		
 	if Input.is_action_just_pressed("P1_A"):
+		$check.play()
 		if P1on == 0:
 			P1_is_Select = true
 			$SelectP1.texture = load("res://game dot/UI/SelectP1.2.png")
@@ -60,14 +63,17 @@ func P1select():
 	
 func P2select():
 	if Input.is_action_just_pressed("P2_MR") and P2_is_Select == false:
+		$popup.play()
 		if P2P>=3:return
 		else:P2P += 1
 	elif Input.is_action_just_pressed("P2_ML") and P2_is_Select == false:
+		$popup.play()
 		if P2P<=1:return
 		else:P2P-=1
 	$P2CHA.texture = load(img[P2P-1])
 		
-	if Input.is_action_just_pressed("P2_A"):
+	if Input.is_action_just_pressed("P1_A"):
+		$check.play()
 		if P2on == 0:
 			P2_is_Select = true
 			$SelectP2.texture = load("res://game dot/UI/SelectP2.2.png")

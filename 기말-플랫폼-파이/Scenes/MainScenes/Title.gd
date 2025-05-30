@@ -17,3 +17,19 @@ func _on_setting_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_play_mouse_entered() -> void:
+	$Play/P.play()
+
+
+func _on_guide_mouse_entered() -> void:
+	$Guide/G.play()
+
+
+func _on_setting_mouse_entered() -> void:
+	$Setting/S.play()
+
+
+func _on_exit_mouse_entered() -> void:
+	$Exit/E.play()

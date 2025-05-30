@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://c3of1iydq6u1v"]
+
+[ext_resource type="Texture2D" uid="uid://frj2rrks6fn3" path="res://game dot/shadow/lancer/lancer skill3.1.png" id="1_46qv1"]
+[ext_resource type="Script" uid="uid://ffyd78yjbrf4" path="res://Scenes/character/needle.gd" id="1_tvkwg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvkwg"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cje8i"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(48, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tdra"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(96, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kwiu"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(144, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb0ae"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(192, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aeyl"]
+atlas = ExtResource("1_46qv1")
+region = Rect2(240, 0, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmgd7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvkwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cje8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tdra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kwiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb0ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4aeyl")
+}],
+"loop": false,
+"name": &"needle",
+"speed": 18.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46qv1"]
+size = Vector2(97, 16.75)
+
+[node name="Needle" type="Area2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_tvkwg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24, 0)
+sprite_frames = SubResource("SpriteFrames_cmgd7")
+animation = &"needle"
+frame = 5
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-24, 0)
+sprite_frames = SubResource("SpriteFrames_cmgd7")
+animation = &"needle"
+frame = 5
+frame_progress = 1.0
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.375)
+shape = SubResource("RectangleShape2D_46qv1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

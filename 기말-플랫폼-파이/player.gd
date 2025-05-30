@@ -24,6 +24,11 @@ func Setting():
 			$Area/S2.connect("body_entered",Skill2area)
 		elif Global.SelectP1 == "Lancer" :
 			C = Lancer.new()
+			C.create()
+			$Anim.sprite_frames = Global.trs_lancer
+			add_child(Global.Area_lancer.instantiate())
+			$Area/NA.connect("body_entered",Attackarea)
+			$Area/S2.connect("body_entered",Skill2area)
 	
 	if playerNum == 2:
 		if Global.SelectP2 == "Fighter":
@@ -44,6 +49,11 @@ func Setting():
 			$Area/S2.connect("body_entered",Skill2area)
 		elif Global.SelectP2 == "Lancer" :
 			C = Lancer.new()
+			C.create()
+			$Anim.sprite_frames = Global.trs_lancer
+			add_child(Global.Area_lancer.instantiate())
+			$Area/NA.connect("body_entered",Attackarea)
+			$Area/S2.connect("body_entered",Skill2area)
 			
 	C.body = self
 func _physics_process(delta: float):
@@ -61,6 +71,9 @@ func P1_Control(delta) :
 	if is_on_floor():
 		C.is_jump = false
 		C.Gravity = 0
+	
+	if Input.is_action_just_pressed("P1_DASH") and !C.is_attack:
+		C.dash(300,0.5,C.Look)
 	
 	if Input.is_action_pressed("P1_A") and !C.is_attack:
 		C.Attack()

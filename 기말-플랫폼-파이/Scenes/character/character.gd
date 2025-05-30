@@ -34,8 +34,8 @@ var NOWSP = 0
 var is_jump = false
 var is_attack = false
 var is_knockback =false
-
 var is_dash = false
+
 var dash_speed = 0
 
 var NKstrengh = 0
@@ -62,12 +62,12 @@ func move(dir,y):
 
 func anim(dir:Vector2):
 	if is_attack : return
-	if dir.x > 0 and !is_attack and !is_knockback:
+	if dir.x > 0 and !is_attack and !is_knockback and !is_dash:
 		body.get_node("Anim").flip_h = false
 		body.get_node("Area").scale.x = 3
 		Look = 1
 
-	elif dir.x < 0 and !is_attack and !is_knockback:
+	elif dir.x < 0 and !is_attack and !is_knockback and !is_dash:
 		body.get_node("Anim").flip_h = true
 		body.get_node("Area").scale.x = -3
 		Look = -1
@@ -76,6 +76,8 @@ func anim(dir:Vector2):
 		body.get_node("Anim").play("hit")
 	elif is_attack:
 		body.get_node("Anim").play("attack")
+	elif is_dash:
+		body.get_node("Anim").play("dash")
 	elif is_jump:
 		body.get_node("Anim").play("jump")
 	elif dir.x != 0:
@@ -123,9 +125,10 @@ func stop_knockback():
 #포물선에서 날아갈때 최고점 찍고 기절 풀리기
 func dash(SP,duraition,look):
 	if look>0: dash_speed = SP
-	else: dash_speed = -SP	
+	else: dash_speed = -SP
 	is_dash = true
 	await body.get_tree().create_timer(duraition).timeout
+	Gravity = 0
 	is_dash = false
 
 func coolTime(delta: float):

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cpoacvii103cd" path="res://game dot/shadow/gunner/gunner bullet.png" id="1_k48h5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1aucr"]
-size = Vector2(2, 2)
+size = Vector2(6, 6)
 
 [node name="Sprite2D" type="Area2D"]
 script = ExtResource("1_1aucr")

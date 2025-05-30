@@ -4,7 +4,7 @@ class_name Fighter
 var touch : Array
 
 func create():
-	AD = 15 #공격력
+	AD = 30 #공격력
 	AD_1 = 1.5
 	AD_2 = 1.2
 	AD_3 = 1.8

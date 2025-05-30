@@ -9,6 +9,10 @@ func _process(delta: float):
 func setting(Cas,di):
 	caster = Cas
 	dir = di
+	if dir > 0:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 
 func _on_body_entered(body: Node2D):
 	if body.is_in_group("Player") and body != caster:

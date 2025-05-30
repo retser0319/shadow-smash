@@ -1,7 +1,8 @@
-[gd_resource type="SpriteFrames" load_steps=53 format=3 uid="uid://8vsffvnumenb"]
+[gd_resource type="SpriteFrames" load_steps=57 format=3 uid="uid://8vsffvnumenb"]
 
 [ext_resource type="Texture2D" uid="uid://cvpvpdajxwdh8" path="res://game dot/shadow/fighter/attack.png" id="1_40a2q"]
 [ext_resource type="Texture2D" uid="uid://cnm4baabj4pyv" path="res://game dot/shadow/fighter/hit.png" id="2_kir1n"]
+[ext_resource type="Texture2D" uid="uid://d33etga2m0d5k" path="res://game dot/shadow/fighter/fighter dash-sheet.png" id="2_obilw"]
 [ext_resource type="Texture2D" uid="uid://cad6lljj52tlg" path="res://game dot/shadow/fighter/shadow idle.png" id="3_obilw"]
 [ext_resource type="Texture2D" uid="uid://dkrmaceisayyn" path="res://game dot/shadow/fighter/shadow jump.png" id="4_2xp1j"]
 [ext_resource type="Texture2D" uid="uid://caixgbqyhfa2q" path="res://game dot/shadow/fighter/run.png" id="5_v78hd"]
@@ -48,6 +49,18 @@ region = Rect2(320, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_y6uwr"]
 atlas = ExtResource("1_40a2q")
 region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xp1j"]
+atlas = ExtResource("2_obilw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v78hd"]
+atlas = ExtResource("2_obilw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hirk"]
+atlas = ExtResource("2_obilw")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83xs0"]
 atlas = ExtResource("2_kir1n")
@@ -226,6 +239,20 @@ animations = [{
 "loop": false,
 "name": &"attack2",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xp1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v78hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hirk")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,

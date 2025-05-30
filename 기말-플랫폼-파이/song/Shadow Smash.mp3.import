@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6fqjm4mxtjy3"
+path="res://.godot/imported/Shadow Smash.mp3-bd9a74a247022f32059131a43e6eb439.mp3str"
+
+[deps]
+
+source_file="res://song/Shadow Smash.mp3"
+dest_files=["res://.godot/imported/Shadow Smash.mp3-bd9a74a247022f32059131a43e6eb439.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
