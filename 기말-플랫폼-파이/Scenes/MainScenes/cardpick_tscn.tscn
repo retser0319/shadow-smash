@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cog8m0fmhavk5"]
+[gd_scene load_steps=8 format=3 uid="uid://cog8m0fmhavk5"]
 
 [ext_resource type="Script" uid="uid://bekqrfb3wr2hm" path="res://Scenes/MainScenes/cardpick_tscn.gd" id="1_is31p"]
 [ext_resource type="Texture2D" uid="uid://bvjbiqtikuarq" path="res://game dot/shadow/UI/card.png" id="1_ys3cn"]
 [ext_resource type="Texture2D" uid="uid://ctsq7hx5s6lgi" path="res://game dot/UI/SelectP1.png" id="3_rynir"]
 [ext_resource type="Texture2D" uid="uid://cq54vp2bh8apc" path="res://game dot/UI/SelectP2.png" id="4_dvymf"]
+[ext_resource type="AudioStream" uid="uid://blitpo4qnogbp" path="res://song/Pop up 2.mp3" id="5_b7rmj"]
+[ext_resource type="AudioStream" uid="uid://dfw6ex01uaanp" path="res://song/Click small.mp3" id="6_aljul"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_is31p"]
 
@@ -102,3 +104,9 @@ rotation = 1.5708
 scale = Vector2(9, 9)
 texture = ExtResource("4_dvymf")
 flip_h = true
+
+[node name="popup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_b7rmj")
+
+[node name="check" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_aljul")

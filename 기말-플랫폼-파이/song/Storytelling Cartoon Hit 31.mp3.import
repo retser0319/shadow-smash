@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5g3dkdn1pcdi"
+path="res://.godot/imported/Storytelling Cartoon Hit 31.mp3-124a19007b692c5085e75611f0e77407.mp3str"
+
+[deps]
+
+source_file="res://song/Storytelling Cartoon Hit 31.mp3"
+dest_files=["res://.godot/imported/Storytelling Cartoon Hit 31.mp3-124a19007b692c5085e75611f0e77407.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

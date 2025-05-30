@@ -9,7 +9,14 @@ func _on_fullscreen_toggled(button_pressed: bool):
 		DisplayServer.WINDOW_MODE_FULLSCREEN if button_pressed
 		else DisplayServer.WINDOW_MODE_WINDOWED
 	)
+	$check.play()
 
 
 func _on_texture_button_pressed() -> void:
+	$check.play()
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Title.tscn")
+
+
+func _on_texture_button_mouse_entered() -> void:
+	$Pop.play()
+	pass # Replace with function body.

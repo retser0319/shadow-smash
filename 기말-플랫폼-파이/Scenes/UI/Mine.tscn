@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ditdxn2dmrtct"]
+[gd_scene load_steps=17 format=3 uid="uid://ditdxn2dmrtct"]
 
 [ext_resource type="Script" uid="uid://d2akhnr875k0r" path="res://Scenes/UI/mine.gd" id="1_7j278"]
 [ext_resource type="Texture2D" uid="uid://1rme2yvmt1gu" path="res://game dot/UI/mine bomb.png" id="2_dtddr"]
+[ext_resource type="AudioStream" uid="uid://ie120nytv343" path="res://song/Bomb Explosion 1 Sound.mp3" id="3_dtddr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clxqb"]
 size = Vector2(8, 3.2)
@@ -110,6 +111,9 @@ position = Vector2(0, -8.42105)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 5.2)
 shape = SubResource("CircleShape2D_7j278")
+
+[node name="Bombsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dtddr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -25,12 +25,15 @@ func Attack():
 	body.get_node("Area/NA/Collision").disabled = false
 	if attackNum == 1:
 		body.get_node("Anim").play("attack1")
+		body.get_node("cut").play()
 		await body.get_tree().create_timer(0.5).timeout
 	elif attackNum == 2:
 		body.get_node("Anim").play("attack2")
+		body.get_node("cut").play()
 		await body.get_tree().create_timer(0.5).timeout
 	else :
 		body.get_node("Anim").play("attack3")
+		body.get_node("cut").play()
 		await body.get_tree().create_timer(0.5).timeout
 		attackNum=0
 	is_attack = false
@@ -40,6 +43,7 @@ func Skill1():
 	if is_attack or Skill_On[1] != 0: return
 	is_attack = true
 	body.get_node("Anim").play("skill1")
+	body.get_node("throw").play()
 	await body.get_tree().create_timer(0.5).timeout
 	var fly_lance = Global.fly_lance.instantiate()
 	fly_lance.global_position = body.global_position + Vector2(0,-20)
@@ -54,6 +58,7 @@ func Skill2():
 	body.get_node("AR").start()
 	body.get_node("Area/S2/Collision").disabled = false
 	body.get_node("Anim").play("skill2")
+	body.get_node("Dash").play()
 	await dash(500,0.5,Look)
 	is_attack = false
 	body.get_node("Area/S2/Collision").disabled = true
@@ -67,6 +72,7 @@ func Skill3():
 	body.get_node("Anim").play("skill3")
 	await body.get_tree().create_timer(0.5).timeout
 	if body.C.is_jump == false:
+		body.get_node("bomb").play()
 		var needle = Global.needle.instantiate()
 		needle.global_position = body.global_position + Vector2(0,2)
 		needle.setting(body)

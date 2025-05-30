@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://gbsa0pue72rc"]
+[gd_scene load_steps=11 format=3 uid="uid://gbsa0pue72rc"]
 
 [ext_resource type="Script" uid="uid://jy6vp844kjbo" path="res://player.gd" id="1_cvnsp"]
-[ext_resource type="SpriteFrames" uid="uid://f1um8ei50yvj" path="res://game dot/shadow/lancer/lancer.tres" id="2_s1381"]
+[ext_resource type="SpriteFrames" uid="uid://8vsffvnumenb" path="res://game dot/shadow/fighter/fighter.tres" id="2_c3ncy"]
+[ext_resource type="AudioStream" uid="uid://d1fisojhfki6j" path="res://song/Mario Jumping Sound.mp3" id="3_815vn"]
+[ext_resource type="AudioStream" uid="uid://dwfcm1auuwlds" path="res://song/Gun Fire Sound (1).mp3" id="4_v4ydf"]
+[ext_resource type="AudioStream" uid="uid://b5g3dkdn1pcdi" path="res://song/Storytelling Cartoon Hit 31.mp3" id="5_c3ncy"]
+[ext_resource type="AudioStream" uid="uid://cgnqehsgp0jnh" path="res://song/Woosh Sound.mp3" id="6_mgeua"]
+[ext_resource type="AudioStream" uid="uid://c5rc5pbmdnrar" path="res://song/Spear Throw Sound.mp3" id="7_cwhtp"]
+[ext_resource type="AudioStream" uid="uid://ctrrkrbrak0mi" path="res://song/Cut with the Knife.mp3" id="8_fdyc6"]
+[ext_resource type="AudioStream" uid="uid://ie120nytv343" path="res://song/Bomb Explosion 1 Sound.mp3" id="9_nbtwp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1381"]
 radius = 17.0
@@ -14,8 +21,8 @@ script = ExtResource("1_cvnsp")
 texture_filter = 1
 position = Vector2(0, -14)
 scale = Vector2(3, 3)
-sprite_frames = ExtResource("2_s1381")
-animation = &"idle"
+sprite_frames = ExtResource("2_c3ncy")
+animation = &"skill3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_s1381")
@@ -25,6 +32,27 @@ wait_time = 3.0
 one_shot = true
 
 [node name="NK" type="Timer" parent="."]
+
+[node name="JUMP" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_815vn")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_v4ydf")
+
+[node name="Punch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_c3ncy")
+
+[node name="Dash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_mgeua")
+
+[node name="throw" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_cwhtp")
+
+[node name="cut" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fdyc6")
+
+[node name="bomb" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_nbtwp")
 
 [connection signal="timeout" from="AR" to="." method="Attack_Reset"]
 [connection signal="timeout" from="NK" to="." method="_on_nk_timeout"]

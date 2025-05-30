@@ -10,7 +10,7 @@ size = Vector2(48, 28)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_ybsro")
 
-[node name="Area2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("2_rljxw")

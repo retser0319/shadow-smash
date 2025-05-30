@@ -25,6 +25,7 @@ func Attack():
 	if attackNum == 1:
 		body.get_node("Anim").play("attack")
 		await body.get_tree().create_timer(0.33).timeout
+		body.get_node("Shoot").play()
 		var bullet = Global.bullet.instantiate()
 		bullet.global_position = body.global_position + Vector2(0,-20)
 		bullet.setting(body,Look)
@@ -32,6 +33,7 @@ func Attack():
 	elif attackNum == 2:
 		body.get_node("Anim").play("attack2")
 		await body.get_tree().create_timer(0.33).timeout
+		body.get_node("Shoot").play()
 		var bullet = Global.bullet.instantiate()
 		bullet.global_position = body.global_position + Vector2(0,-20)
 		bullet.setting(body,Look)
@@ -40,6 +42,7 @@ func Attack():
 		body.get_node("Anim").play("attack3")
 		await body.get_tree().create_timer(0.1).timeout
 		for i in range(2):
+			body.get_node("Shoot").play()
 			var bullet = Global.bullet.instantiate()
 			bullet.global_position = body.global_position + Vector2(0,-20)
 			bullet.setting(body,Look)
@@ -78,6 +81,7 @@ func Skill3():
 	is_attack = true
 	body.get_node("Anim").play("skill3")
 	await body.get_tree().create_timer(0.6).timeout
+	body.get_node("Shoot").play()
 	var bullet = Global.sp_bullet.instantiate()
 	bullet.global_position = body.global_position
 	bullet.setting(body,Look)

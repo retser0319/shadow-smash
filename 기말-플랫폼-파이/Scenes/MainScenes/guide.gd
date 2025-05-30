@@ -8,10 +8,12 @@ func _ready() -> void:
 		pageNum = 1
 	
 func _on_texture_button_pressed() -> void:
+	$Check.play()
 	get_tree().change_scene_to_file("res://Scenes/MainScenes/Title.tscn")
 
 
 func _on_back_pressed() -> void:
+	$Check.play()
 	pageNum -= 1
 	if (pageNum == 1):
 		$Back.visible=false
@@ -26,6 +28,7 @@ func _on_back_pressed() -> void:
 		
 
 func _on_next_pressed() -> void:
+	$Check.play()
 	pageNum += 1
 	if (pageNum == 2):
 		get_node("Page1").visible = false
@@ -37,3 +40,15 @@ func _on_next_pressed() -> void:
 		get_node("Page2").visible = false
 		$Next.visible = true
 		$Back.visible = false
+
+
+func _on_title_mouse_entered() -> void:
+	$Pop.play()
+
+
+func _on_back_mouse_entered() -> void:
+	$Pop.play()
+
+
+func _on_next_mouse_entered() -> void:
+	$Pop.play()

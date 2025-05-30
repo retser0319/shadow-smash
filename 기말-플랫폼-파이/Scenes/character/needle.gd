@@ -14,4 +14,4 @@ func setting(Cas):
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") and body != caster:
-		body.C.onHit(caster.C.AD * caster.C.AD_3,caster.C.NK * caster.C.NK_3,caster.C.Look)
+		body.C.onHit(caster.C.AD * caster.C.AD_3,caster.C.NK_3,caster.C.Look)

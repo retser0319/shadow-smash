@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5rc5pbmdnrar"
+path="res://.godot/imported/Spear Throw Sound.mp3-a122822a8091db387617c7b792b4a98a.mp3str"
+
+[deps]
+
+source_file="res://song/Spear Throw Sound.mp3"
+dest_files=["res://.godot/imported/Spear Throw Sound.mp3-a122822a8091db387617c7b792b4a98a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

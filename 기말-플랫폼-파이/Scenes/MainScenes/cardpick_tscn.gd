@@ -54,9 +54,11 @@ func P1_Choice():
 		return
 	
 	if Input.is_action_just_pressed("P1_MR") and SelectP1_card == false and get_tree().paused:
+		$popup.play()
 		if position_P1>=3:return
 		else:position_P1 += 1
 	elif Input.is_action_just_pressed("P1_ML") and SelectP1_card == false and get_tree().paused:
+		$popup.play()
 		if position_P1<=1:return
 		else:position_P1-=1
 		
@@ -67,6 +69,7 @@ func P1_Choice():
 	if Input.is_action_just_pressed("P1_A") and get_tree().paused:
 		if SelectP2_card == true and position_P2 == position_P1:
 			return
+		$check.play()
 		print(str(position_P1))
 			
 		if SelectP1_card ==false:
@@ -94,10 +97,12 @@ func P2_Choice():
 	if first_dead == "P1" and !SelectP1_card:
 		return
 	
-	if Input.is_action_just_pressed("P2_MR") and SelectP2_card == false:
+	if Input.is_action_just_pressed("P2_MR") and SelectP2_card == false and get_tree().paused:
+		$popup.play()
 		if position_P2>=3:return
 		else:position_P2 += 1
-	elif Input.is_action_just_pressed("P2_ML") and SelectP2_card == false:
+	elif Input.is_action_just_pressed("P2_ML") and SelectP2_card == false and get_tree().paused:
+		$popup.play()
 		if position_P2<=1:return
 		else:position_P2-=1
 		
@@ -108,7 +113,7 @@ func P2_Choice():
 	if Input.is_action_just_pressed("P2_A") and get_tree().paused:
 		if SelectP1_card == true and position_P1 == position_P2:
 			return
-			
+		$check.play()
 		if SelectP2_card ==false:
 			$SelectP2.texture = load("res://game dot/UI/SelectP2.2.png")
 			SelectP2_card = true

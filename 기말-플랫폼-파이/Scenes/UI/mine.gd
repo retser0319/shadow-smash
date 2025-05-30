@@ -25,6 +25,7 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		$AnimatedSprite2D.play()
 		await get_tree().create_timer(0.3).timeout
+		$Bombsound.play()
 		for O in touch.size():
 			touch[O].C.onHit(caster.C.AD*caster.C.AD_1,caster.C.NK_1,(touch[O].global_position.x - global_position.x))
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctrrkrbrak0mi"
+path="res://.godot/imported/Cut with the Knife.mp3-d076582da98f9a49d637ff0e4da868e4.mp3str"
+
+[deps]
+
+source_file="res://song/Cut with the Knife.mp3"
+dest_files=["res://.godot/imported/Cut with the Knife.mp3-d076582da98f9a49d637ff0e4da868e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

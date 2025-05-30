@@ -21,13 +21,16 @@ func Attack():
 	if is_attack : return
 	is_attack = true
 	body.get_node("AR").start()
+	body.get_node("Punch").play()
 	attackNum += 1
 	body.get_node("Area/NA/Collision").disabled = false
 	if attackNum != 3:
 		body.get_node("Anim").play("attack")
+		body.get_node("Punch").play()
 		await body.get_tree().create_timer(0.33).timeout
 	else :
 		body.get_node("Anim").play("attack2")
+		body.get_node("Punch").play()
 		await body.get_tree().create_timer(0.5).timeout
 		attackNum=0
 	is_attack = false
@@ -40,6 +43,7 @@ func Skill1():
 	body.get_node("Area/S1/Collision").disabled = false
 	body.get_node("Anim").play("skill1")
 	await body.get_tree().create_timer(0.5).timeout
+	body.get_node("Punch").play()
 	is_attack = false
 	body.get_node("Area/S1/Collision").disabled = true
 	Skill_On[1] = Skill_delay[1]
@@ -50,6 +54,7 @@ func Skill2():
 	body.get_node("AR").start()
 	body.get_node("Area/S2/Collision").disabled = false
 	body.get_node("Anim").play("skill2")
+	body.get_node("Dash").play()
 	await dash(500,0.5,Look)
 	is_attack = false
 	body.get_node("Area/S2/Collision").disabled = true
@@ -61,6 +66,7 @@ func Skill3():
 	body.get_node("AR").start()
 	body.get_node("Area/S3/Collision").disabled = false
 	body.get_node("Anim").play("skill3")
+	body.get_node("Punch").play()
 	await body.get_tree().create_timer(0.5).timeout
 	is_attack = false
 	body.get_node("Area/S3/Collision").disabled = true
