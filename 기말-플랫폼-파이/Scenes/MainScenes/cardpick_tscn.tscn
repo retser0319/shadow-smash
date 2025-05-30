@@ -107,6 +107,8 @@ flip_h = true
 
 [node name="popup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_b7rmj")
+volume_db = -10.0
 
 [node name="check" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_aljul")
+volume_db = -10.0

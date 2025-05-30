@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbsx3yhtrlnhd"
+path="res://.godot/imported/Crash Rock Crash RockImpact 01.mp3-7d4824db6fc512236d3f2e3e62d0f8cc.mp3str"
+
+[deps]
+
+source_file="res://song/Crash Rock Crash RockImpact 01.mp3"
+dest_files=["res://.godot/imported/Crash Rock Crash RockImpact 01.mp3-7d4824db6fc512236d3f2e3e62d0f8cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

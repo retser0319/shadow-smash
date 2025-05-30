@@ -68,13 +68,13 @@ func P1_Control(delta) :
 	velocity = C.move(Vector2(x,0),y) * delta
 	move_and_slide()
 	
-	if Input.is_action_pressed("P1_J") and C.is_jump:
+	if Input.is_action_just_pressed("P1_J") and C.is_jump:
 		$JUMP.play()
 	if is_on_floor():
 		C.is_jump = false
 		C.Gravity = 0
 	
-	if Input.is_action_just_pressed("P1_DASH") and !C.is_attack:
+	if Input.is_action_just_pressed("P1_DASH") and !C.is_attack and !C.is_dash:
 		$Dash.play()
 		C.dash(300,0.5,C.Look)
 	
@@ -97,14 +97,14 @@ func P2_Control(delta) :
 	velocity = C.move(Vector2(x,0),y)* delta
 	move_and_slide()
 	
-	if Input.is_action_pressed("P2_J") and C.is_jump:
+	if Input.is_action_just_pressed("P2_J") and C.is_jump:
 		$JUMP.play()
 		
 	if is_on_floor():
 		C.is_jump = false
 		C.Gravity = 0
 	
-	if Input.is_action_just_pressed("P2_DASH") and !C.is_attack:
+	if Input.is_action_just_pressed("P2_DASH") and !C.is_attack and !C.is_dash:
 		$Dash.play()
 		C.dash(300,0.5,C.Look)
 	

@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cgnqehsgp0jnh" path="res://song/Woosh Sound.mp3" id="6_mgeua"]
 [ext_resource type="AudioStream" uid="uid://c5rc5pbmdnrar" path="res://song/Spear Throw Sound.mp3" id="7_cwhtp"]
 [ext_resource type="AudioStream" uid="uid://ctrrkrbrak0mi" path="res://song/Cut with the Knife.mp3" id="8_fdyc6"]
-[ext_resource type="AudioStream" uid="uid://ie120nytv343" path="res://song/Bomb Explosion 1 Sound.mp3" id="9_nbtwp"]
+[ext_resource type="AudioStream" uid="uid://bbsx3yhtrlnhd" path="res://song/Crash Rock Crash RockImpact 01.mp3" id="9_nbtwp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1381"]
 radius = 17.0
@@ -35,24 +35,31 @@ one_shot = true
 
 [node name="JUMP" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_815vn")
+volume_db = -20.0
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_v4ydf")
+volume_db = -20.0
 
 [node name="Punch" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_c3ncy")
+volume_db = -10.0
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_mgeua")
+volume_db = -10.0
 
 [node name="throw" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_cwhtp")
+volume_db = -10.0
 
 [node name="cut" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_fdyc6")
+volume_db = -10.0
 
 [node name="bomb" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_nbtwp")
+volume_db = -10.0
 
 [connection signal="timeout" from="AR" to="." method="Attack_Reset"]
 [connection signal="timeout" from="NK" to="." method="_on_nk_timeout"]

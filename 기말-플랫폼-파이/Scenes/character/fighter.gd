@@ -8,7 +8,7 @@ func create():
 	AD_1 = 1.5
 	AD_2 = 1.2
 	AD_3 = 1.8
-	DP = 5
+	DP = 10
 	
 	NK = 20
 	NK_1 = 35

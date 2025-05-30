@@ -4,16 +4,16 @@ class_name Lancer
 var touch : Array
 
 func create():
-	AD = 30 #공격력
+	AD = 25 #공격력
 	AD_1 = 1
 	AD_2 = 1.2
 	AD_3 = 1.8
 	DP = 10
 	
 	NK = 20
-	NK_1 = 30
+	NK_1 = 20
 	NK_2 = 25
-	NK_3 = 40
+	NK_3 = 25
 	
 	Skill_delay = [0,2,2,2]
 

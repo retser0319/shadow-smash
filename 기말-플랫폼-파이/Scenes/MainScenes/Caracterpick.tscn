@@ -73,6 +73,8 @@ autoplay = true
 
 [node name="popup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_o8476")
+volume_db = -10.0
 
 [node name="check" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_cay4s")
+volume_db = -10.0

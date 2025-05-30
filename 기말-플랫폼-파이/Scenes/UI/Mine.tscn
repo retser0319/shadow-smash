@@ -114,6 +114,7 @@ shape = SubResource("CircleShape2D_7j278")
 
 [node name="Bombsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_dtddr")
+volume_db = -20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

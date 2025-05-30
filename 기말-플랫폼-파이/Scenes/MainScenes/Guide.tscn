@@ -441,9 +441,11 @@ horizontal_alignment = 1
 
 [node name="Pop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_8fhc2")
+volume_db = -10.0
 
 [node name="Check" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_rux8g")
+volume_db = -10.0
 
 [connection signal="mouse_entered" from="Title" to="." method="_on_title_mouse_entered"]
 [connection signal="pressed" from="Title" to="." method="_on_texture_button_pressed"]

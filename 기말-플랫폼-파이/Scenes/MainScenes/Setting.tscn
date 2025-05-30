@@ -47,9 +47,11 @@ vertical_alignment = 1
 
 [node name="Pop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_chcjo")
+volume_db = -10.0
 
 [node name="check" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_vo432")
+volume_db = -10.0
 
 [connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
