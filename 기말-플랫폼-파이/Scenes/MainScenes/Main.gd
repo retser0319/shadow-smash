@@ -25,7 +25,7 @@ func _ready() -> void:
 	
 
 func P1death():
-	if $P1.position.y < 0 or $P1.position.y > get_viewport_rect().size.y :
+	if $P1.position.y > get_viewport_rect().size.y :
 		if !$P1.C.is_death:
 			$P1.C.Life -= 1
 			$P1.C.RG = 0
@@ -57,7 +57,7 @@ func P1death():
 		$P1.C.is_death = false
 
 func P2death():
-	if $P2.position.y < 0 or $P2.position.y > get_viewport_rect().size.y :
+	if $P2.position.y > get_viewport_rect().size.y :
 		
 		if !$P2.C.is_death:
 			$P2.C.Life -= 1

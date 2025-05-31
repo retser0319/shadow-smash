@@ -1,9 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=61 format=3 uid="uid://f1um8ei50yvj"]
+[gd_resource type="SpriteFrames" load_steps=63 format=3 uid="uid://f1um8ei50yvj"]
 
 [ext_resource type="Texture2D" uid="uid://y8yjaoyyg33v" path="res://game dot/shadow/lancer/lancer attack1.png" id="1_0tvwj"]
 [ext_resource type="Texture2D" uid="uid://wpcy5fbuald1" path="res://game dot/shadow/lancer/lancer attack2.png" id="2_aansh"]
 [ext_resource type="Texture2D" uid="uid://bsxx78gjel14o" path="res://game dot/shadow/lancer/lancer attack3.png" id="3_tl1lj"]
 [ext_resource type="Texture2D" uid="uid://bag8j8y0husky" path="res://game dot/shadow/lancer/lancer1 dash.png" id="4_i143x"]
+[ext_resource type="Texture2D" uid="uid://bkx3acyul7fms" path="res://game dot/shadow/lancer/lancer hit.png" id="5_p1m05"]
 [ext_resource type="Texture2D" uid="uid://cpj5y5jtin5wt" path="res://game dot/shadow/lancer/lancer1 idle.png" id="5_xgyyu"]
 [ext_resource type="Texture2D" uid="uid://kf7e82tuky38" path="res://game dot/shadow/lancer/lancer2 jump.png" id="6_ob461"]
 [ext_resource type="Texture2D" uid="uid://n3vx0gh24jfw" path="res://game dot/shadow/lancer/lancer run.png" id="7_e5d5r"]
@@ -86,6 +87,10 @@ region = Rect2(64, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d42ii"]
 atlas = ExtResource("4_i143x")
 region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt4rk"]
+atlas = ExtResource("5_p1m05")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smjl8"]
 atlas = ExtResource("5_xgyyu")
@@ -289,6 +294,17 @@ animations = [{
 "loop": true,
 "name": &"dash",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt4rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt4rk")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
