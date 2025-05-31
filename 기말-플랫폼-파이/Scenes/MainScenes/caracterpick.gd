@@ -72,7 +72,7 @@ func P2select():
 		else:P2P-=1
 	$P2CHA.texture = load(img[P2P-1])
 		
-	if Input.is_action_just_pressed("P1_A"):
+	if Input.is_action_just_pressed("P2_A"):
 		$check.play()
 		if P2on == 0:
 			P2_is_Select = true
