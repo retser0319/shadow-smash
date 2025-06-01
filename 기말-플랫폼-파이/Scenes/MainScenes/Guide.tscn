@@ -103,20 +103,20 @@ text = "
 P1                                                                           P2
 Move                                                                      Move
 
-
-
 JUMP                                                                      JUMP
 
 Attack                                                                  Attack
 
-SP Attack                                                            SP Attack"
+SP Attack                                                            SP Attack
+
+Dash                                                                   Dash"
 horizontal_alignment = 1
 
 [node name="P1" type="Node2D" parent="Page1"]
 
 [node name="W" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(177, 206)
+position = Vector2(348, 110)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -135,7 +135,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="S" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(177, 259)
+position = Vector2(348, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -154,7 +154,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="A" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(124, 259)
+position = Vector2(295, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -173,7 +173,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(230, 259)
+position = Vector2(401, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -192,7 +192,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="K" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(320, 318)
+position = Vector2(320, 235)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -211,7 +211,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="J" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(320, 408)
+position = Vector2(320, 325)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -230,7 +230,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="U" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(320, 493)
+position = Vector2(320, 410)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -249,7 +249,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="I" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(375, 493)
+position = Vector2(375, 410)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -268,7 +268,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="O" type="Sprite2D" parent="Page1/P1"]
 texture_filter = 1
-position = Vector2(430, 493)
+position = Vector2(430, 410)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
@@ -285,39 +285,56 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="L" type="Sprite2D" parent="Page1/P1"]
+texture_filter = 1
+position = Vector2(320, 493)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P1/L"]
+offset_left = -18.0
+offset_top = -10.0
+offset_right = 22.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 21
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="P2" type="Node2D" parent="Page1"]
 
 [node name="Up" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(978, 206)
+position = Vector2(816, 110)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_x4k2m")
 
 [node name="Down" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(978, 259)
+position = Vector2(816, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_7qcdp")
 
 [node name="Left" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(925, 259)
+position = Vector2(763, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_1gxer")
 
 [node name="Right" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(1031, 259)
+position = Vector2(869, 163)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_c3mgd")
 
-[node name="K" type="Sprite2D" parent="Page1/P2"]
+[node name="2" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(827, 318)
+position = Vector2(827, 234)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
-[node name="Label" type="Label" parent="Page1/P2/K"]
+[node name="Label" type="Label" parent="Page1/P2/2"]
 offset_left = -14.0
 offset_top = -14.0
 offset_right = 18.0
@@ -330,13 +347,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="J" type="Sprite2D" parent="Page1/P2"]
+[node name="1" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(827, 408)
+position = Vector2(827, 324)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
-[node name="Label" type="Label" parent="Page1/P2/J"]
+[node name="Label" type="Label" parent="Page1/P2/1"]
 offset_left = -14.0
 offset_top = -14.0
 offset_right = 18.0
@@ -349,13 +366,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="U" type="Sprite2D" parent="Page1/P2"]
+[node name="4" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(717, 493)
+position = Vector2(717, 409)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
-[node name="Label" type="Label" parent="Page1/P2/U"]
+[node name="Label" type="Label" parent="Page1/P2/4"]
 offset_left = -14.0
 offset_top = -14.0
 offset_right = 18.0
@@ -368,13 +385,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="I" type="Sprite2D" parent="Page1/P2"]
+[node name="5" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(772, 493)
+position = Vector2(772, 409)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
-[node name="Label" type="Label" parent="Page1/P2/I"]
+[node name="Label" type="Label" parent="Page1/P2/5"]
 offset_left = -14.0
 offset_top = -14.0
 offset_right = 18.0
@@ -387,13 +404,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="O" type="Sprite2D" parent="Page1/P2"]
+[node name="6" type="Sprite2D" parent="Page1/P2"]
 texture_filter = 1
-position = Vector2(827, 493)
+position = Vector2(827, 409)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_u3l16")
 
-[node name="Label" type="Label" parent="Page1/P2/O"]
+[node name="Label" type="Label" parent="Page1/P2/6"]
 offset_left = -14.0
 offset_top = -14.0
 offset_right = 18.0
@@ -405,6 +422,23 @@ text = "6"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Sprite2D" parent="Page1/P2"]
+texture_filter = 1
+position = Vector2(827, 496)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_u3l16")
+
+[node name="Label" type="Label" parent="Page1/P2/3"]
+offset_left = -18.0
+offset_top = -12.6667
+offset_right = 22.0
+offset_bottom = 10.3333
+theme_override_fonts/font = ExtResource("4_rux8g")
+theme_override_font_sizes/font_size = 21
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Page2" type="Node2D" parent="."]
 visible = false
